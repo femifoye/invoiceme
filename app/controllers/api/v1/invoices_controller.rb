@@ -14,7 +14,6 @@ module Api
             end
 
             def create
-                debugger
                 entries = params["entries"]
                 @invoice = @user.invoices.build(invoice_params)
                 @invoice.entries = entries
@@ -41,7 +40,7 @@ module Api
             end
 
             def invoice_params
-                params.permit(:description, :to, :due, :date, :entries, :total, :user_id)
+                params.permit(:description, :to, :due, :date, :total, :user_id)
             end
         end
     end
