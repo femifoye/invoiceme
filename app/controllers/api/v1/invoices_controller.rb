@@ -26,6 +26,8 @@ module Api
             end
 
             def show
+                @invoice = @user.invoices.find(params[:id])
+                render json: @invoice
             end
 
             def update
