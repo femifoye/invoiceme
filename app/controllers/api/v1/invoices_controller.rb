@@ -34,6 +34,14 @@ module Api
             end
 
             def destroy
+                @invoice = @user.invoices.find(params[:id])
+                if @invoice.destroy
+                    render status: :ok, message: "Delete Successful"
+                else
+                    render status: :unprocessable_entity, message: "Unable to delete"
+                end
+
+                
             end
 
             private

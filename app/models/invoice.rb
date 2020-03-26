@@ -5,6 +5,7 @@ class Invoice < ApplicationRecord
     validates :to, presence: true
     validates :due, presence: true
     validates :date, presence: true
+    validates :total, presence: true
 
     serialize :entries, Array
 end
