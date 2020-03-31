@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_23_171747) do
+ActiveRecord::Schema.define(version: 2020_03_31_122131) do
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -43,20 +43,28 @@ ActiveRecord::Schema.define(version: 2020_02_23_171747) do
     t.index ["user_id"], name: "index_invoices_on_user_id"
   end
 
+  create_table "jwt_blacklists", force: :cascade do |t|
+    t.string "jti", null: false
+    t.datetime "exp", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["jti"], name: "index_jwt_blacklists_on_jti"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "email"
-    t.string "password"
-    t.string "address_line_1"
-    t.string "state"
-    t.string "city"
-    t.string "postal_code"
-    t.string "country"
-    t.string "website"
-    t.string "company"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "authentication_token", limit: 30
+    t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "customers", "users"
