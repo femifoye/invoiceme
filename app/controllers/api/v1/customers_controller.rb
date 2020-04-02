@@ -6,17 +6,12 @@ module Api
             def index
                 @customers = @user.customers.all
                 render json: @customers
-                # render json: {
-                #    status: 'Success',
-                #    msg: 'All Customers',
-                #    data: customers
-                # }, status: :ok
             end
 
             def create
                 @customer = @user.customers.build(customer_params)
                 if @customer.save
-                    render json: @customer, status: :created, location: api_v1_user_customer_url(@user, @customer)
+                    render json: @customer, status: :created
                 else
                     render json: @customer.errors, status: :unprocessable_entity
                 end
@@ -24,12 +19,20 @@ module Api
             end
 
             def show
+                @customer = @user.customers.find(params[:id])
+                render json: @customer
             end
 
             def update
             end
 
             def destroy
+                @customer = @user.customers.find(params[:id])
+                if @customer.destroy
+                    render status: :ok, message: "Delete Successful"
+                else
+                    render status: :unprocessable_entity, message: "Unable to delete"
+                end
             end
 
             private
