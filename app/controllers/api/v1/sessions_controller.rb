@@ -1,22 +1,22 @@
-module Api
-    module V1
-        class SessionsController < Devise::SessionsController
+# module Api
+#     module V1
+#         class SessionsController < Devise::SessionsController
 
-            # def create
-            #     super { @token = current_token }
-            #   end
+#             def create
+#                 super { @token = current_token }
+#               end
             
-            #   def show
-            #   end
+#               def show
+#               end
             
-            #   private
+#               private
             
-            #   def current_token
-            #     byebug
-            #     request.env['warden-jwt_auth.token']
-            #   end
-        end
+#               def current_token
+#                 debugger
+#                 request.env['warden-jwt_auth.token']
+#               end
+#         end
     
-    end
+#     end
 
-end
+# end

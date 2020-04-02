@@ -2,26 +2,12 @@
 
 one:
   first_name: MyString
-  last_name: MyString
+  last: 
   email: MyString
-  password: MyString
-  address_line_1: MyString
-  state: MyString
-  city: MyString
-  postal_code: MyString
-  country: MyString
-  website: MyString
-  company: MyString
+  password_digest: MyString
 
 two:
   first_name: MyString
-  last_name: MyString
+  last: 
   email: MyString
-  password: MyString
-  address_line_1: MyString
-  state: MyString
-  city: MyString
-  postal_code: MyString
-  country: MyString
-  website: MyString
-  company: MyString
+  password_digest: MyString

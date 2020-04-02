@@ -4,14 +4,16 @@ one:
   description: MyText
   to: MyText
   due: MyString
-  date: 2020-02-23 07:14:54
+  date: 2020-04-02 02:40:42
   entries: MyText
   total: 1.5
+  user: one
 
 two:
   description: MyText
   to: MyText
   due: MyString
-  date: 2020-02-23 07:14:54
+  date: 2020-04-02 02:40:42
   entries: MyText
   total: 1.5
+  user: two

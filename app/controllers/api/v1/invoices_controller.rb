@@ -2,6 +2,7 @@ module Api
     module V1
         class InvoicesController < ApplicationController
             before_action :set_user 
+            before_action :authenticate_user
 
             def index
                 @invoices = @user.invoices.all

@@ -14,7 +14,7 @@ gem 'puma', '~> 4.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -24,10 +24,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'figaro'
 
-gem 'devise'
-gem 'devise-jwt', '~> 0.5.9'
-gem 'simple_token_authentication', '~> 1.0'
-gem 'dotenv-rails', :groups => [:development, :test, :production]
+gem 'knock'
+# gem 'devise'
+gem 'jwt'
+# gem 'devise-jwt', '~> 0.5.3'
+# gem 'simple_token_authentication', '~> 1.0'
+# gem 'dotenv-rails', :groups => [:development, :test, :production]
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
