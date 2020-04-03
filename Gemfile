@@ -40,9 +40,9 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
 
-group :development do
+
   gem 'faker'
-end
+
 
 group :production do
   gem 'pg'
