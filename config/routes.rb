@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     namespace :v1 do
       post 'user_token' => 'user_token#create'
-      root 'pages#home'
+      root 'invoices#index'
       #user routes for invoices and customer
       resources :users do
         get '/invoices', to: 'invoices#index'
