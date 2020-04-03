@@ -3,27 +3,27 @@
 one:
   first_name: MyString
   last_name: MyString
-  string: MyString
-  email_address_string: MyString
+  email: MyString
   website: MyString
-  adress_line_1: MyString
+  address_line_1: MyString
   postal_code: MyString
   state: MyString
   city: MyString
   country: MyString
   phone: MyString
   currency: MyString
+  user_id: 7
 
 two:
   first_name: MyString
   last_name: MyString
-  string: MyString
-  email_address_string: MyString
+  email: MyString
   website: MyString
-  adress_line_1: MyString
+  address_line_1: MyString
   postal_code: MyString
   state: MyString
   city: MyString
   country: MyString
   phone: MyString
   currency: MyString
+  user_id: 7

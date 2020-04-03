@@ -1,13 +1,14 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 25
   description: MyText
   to: MyText
   due: MyString
   date: 2020-04-02 02:40:42
   entries: MyText
   total: 1.5
-  user: one
+  user_id: 7
 
 two:
   description: MyText

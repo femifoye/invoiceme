@@ -1,6 +1,6 @@
 
         class Api::V1::UsersController < ApplicationController
-
+          #create new user
           def create
             @user = User.new(user_params)
             if @user.save

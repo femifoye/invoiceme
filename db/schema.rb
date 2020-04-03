@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_094041) do
+ActiveRecord::Schema.define(version: 2020_04_03_152611) do
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -37,18 +37,10 @@ ActiveRecord::Schema.define(version: 2020_04_02_094041) do
     t.datetime "date"
     t.text "entries"
     t.float "total"
-    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["user_id"], name: "index_invoices_on_user_id"
-  end
-
-  create_table "jwt_blacklists", force: :cascade do |t|
-    t.string "jti", null: false
-    t.datetime "exp", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["jti"], name: "index_jwt_blacklists_on_jti"
   end
 
   create_table "users", force: :cascade do |t|

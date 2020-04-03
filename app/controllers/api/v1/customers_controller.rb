@@ -3,11 +3,13 @@ module Api
         class CustomersController < ApplicationController
             before_action :set_user
 
+            #show all customers belonging to a user
             def index
                 @customers = @user.customers.all
                 render json: @customers
             end
 
+            #create a new customer
             def create
                 @customer = @user.customers.build(customer_params)
                 if @customer.save
@@ -18,14 +20,17 @@ module Api
 
             end
 
+            #show customer
             def show
                 @customer = @user.customers.find(params[:id])
-                render json: @customer
+                render json: @customer, status: :ok
             end
 
+            #update customer
             def update
             end
 
+            #delete customer
             def destroy
                 @customer = @user.customers.find(params[:id])
                 if @customer.destroy
@@ -35,6 +40,7 @@ module Api
                 end
             end
 
+            #set private variables
             private
             def set_user
                 @user = User.find(params[:user_id])
